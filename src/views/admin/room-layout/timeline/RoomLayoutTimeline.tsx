@@ -148,6 +148,7 @@ export default function RoomTimelineFullCalendar() {
           },
           resourceTimelineMonth: {
             type: 'resourceTimeline',
+            duration: { months: 1 },
             slotDuration: { hours: 6 }, // 4 cột/ngày
             slotLabelInterval: { hours: 6 },
             slotLabelFormat: [
