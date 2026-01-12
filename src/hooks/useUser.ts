@@ -11,8 +11,6 @@ interface UserProps {
 export default function useUser() {
   const { data: session } = useSession();
   if (session) {
-    console.log('session', session);
-
     const user = session?.user;
     const provider = session?.provider;
     let thumb = user?.image!;
@@ -31,7 +29,7 @@ export default function useUser() {
       email: user!.email!,
       avatar: user?.image!,
       thumb,
-      role: 'UI/UX Designer'
+      role: session?.role || 'user'
     };
 
     return newUser;
